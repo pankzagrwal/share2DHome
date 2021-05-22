@@ -52,7 +52,7 @@
         loop:true,
         // margin:10,
         autoplay:true,
-        autoplayTimeout:1500,
+        autoplayTimeout:2500,
         autoplayHoverPause:true,
         number: 1,
         nav: false,
@@ -105,6 +105,28 @@
         }, 600);
         return false;
       });
+
+    //   Form Submit Handler
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function (evt) {
+        evt.preventDefault();
+        evt.stopPropagation();
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const message = document.getElementById('message').value;
+        fetch('http://3.20.116.189/lead/contact_us', {
+           method: 'POST',
+           mode: 'cors',
+           headers: {
+            'Content-Type': 'application/json'
+           },
+           body: JSON.stringify({
+               name,
+               phone,
+               message
+           })
+        }).then(res => document.getElementById("msgSubmit").innerHTML = "Message Sent!")
+    });
 
   });      
 

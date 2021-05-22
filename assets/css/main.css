@@ -877,7 +877,7 @@ textarea {
 
 .testimonial {
   position: relative;
-  background-color: #F63854;
+  background-color: #e85e6b;
   margin-bottom: 5px;
 }
 
@@ -908,9 +908,10 @@ textarea {
 
 .testimonial-item .content .description {
   width: 100%;
-  color: #333;
+  color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 15px;
+  text-shadow: 0px 10px 10px #234d3c;
 }
 
 .testimonial-item .content .star-icon i {
@@ -987,6 +988,10 @@ textarea {
 
 .testimonial-item .icon-social .linkedin:hover {
   background: #1260A2;
+}
+
+.img-responsive {
+  width: 190px !important;
 }
 
 
